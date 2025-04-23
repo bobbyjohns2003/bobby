@@ -13,11 +13,11 @@ export function validateEquation(equation) {
     equation.indexOf('*')
   );
 
-  // Определяем левую и правую части уравнения, блин, синтаксис в другом коденадо было глянуть, но времени нет куча заданий
+  // Определяем левую и правую части уравнения, блин, надо задеплоить на vps, но времени нет куча заданий по другим предметам
   const leftOperand = equation.slice(0, opIndex);
   const rightOperand = equation.slice(opIndex + 1);
 
-  // Скопировал из примера
+  // Проверка на операнды
   if (!leftOperand || !rightOperand) return 'не хватает одного или нескольких операндов';
 
   // Проверка, что оба операнда являются числами
@@ -27,3 +27,6 @@ export function validateEquation(equation) {
   // Нет ошибок
   return '';
 }
+
+
+
